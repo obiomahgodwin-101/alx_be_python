@@ -23,9 +23,12 @@ def main():
             else:
                 print(f"{item} not found in the list.")
         elif choice == 3:
-            print("Current Shopping List:")
-            for i, item in enumerate(shopping_list, 1):
-                print(f"{i}. {item}")
+            if shopping_list:
+                print("Current Shopping List:")
+                for i, item in enumerate(shopping_list, 1):
+                    print(f"{i}. {item}")
+            else:
+                print("Your shopping list is empty.")
         elif choice == 4:
             print("Goodbye!")
             break
@@ -34,4 +37,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
