@@ -41,7 +41,6 @@ class Library:
             if book.title == title and book.is_available():
                 book.check_out()
                 return True
-        # if not available, print message
         print(f"Book '{title}' is not available.")
         return False
 
@@ -51,7 +50,6 @@ class Library:
             if book.title == title and not book.is_available():
                 book.return_book()
                 return True
-        # if book was not checked out
         print(f"Book '{title}' was not checked out.")
         return False
 
