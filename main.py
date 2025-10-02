@@ -1,4 +1,3 @@
-# main.py
 import sys
 from robust_division_calculator import safe_divide
 
@@ -10,7 +9,6 @@ def main():
     numerator = sys.argv[1]
     denominator = sys.argv[2]
 
-    # Call safe_divide and print the result
     print(safe_divide(numerator, denominator))
 
 if __name__ == "__main__":
