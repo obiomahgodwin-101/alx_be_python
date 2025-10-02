@@ -1,4 +1,8 @@
 def safe_divide(numerator, denominator):
+    """
+    Safely divide two numbers, handling division by zero
+    and non-numeric inputs.
+    """
     try:
         num = float(numerator)
         denom = float(denominator)
