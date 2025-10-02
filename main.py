@@ -1,4 +1,3 @@
-# main.py
 from library_management import Book, Library
 
 def main():
@@ -19,4 +18,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
