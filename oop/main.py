@@ -1,24 +1,22 @@
-class Book:
-    """
-    A class representing a book with title, author, and publication year.
-    Demonstrates the use of Python magic methods.
-    """
+from library_system import Book, EBook, PrintBook, Library
 
-    def __init__(self, title: str, author: str, year: int):
-        """Constructor method to initialize the Book instance."""
-        self.title = title
-        self.author = author
-        self.year = year
+def main():
+    # Create a Library instance
+    my_library = Library()
 
-    def __del__(self):
-        """Destructor method that prints a message when the object is deleted."""
-        print(f"Deleting {self.title}")
+    # Create instances of each type of book
+    classic_book = Book("Pride and Prejudice", "Jane Austen")
+    digital_novel = EBook("Snow Crash", "Neal Stephenson", 500)
+    paper_novel = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
 
-    def __str__(self):
-        """Returns a user-friendly string representation of the book."""
-        return f"{self.title} by {self.author}, published in {self.year}"
+    # Add books to the library
+    my_library.add_book(classic_book)
+    my_library.add_book(digital_novel)
+    my_library.add_book(paper_novel)
 
-    def __repr__(self):
-        """Returns an official string representation for debugging/recreation."""
-        return f"Book('{self.title}', '{self.author}', {self.year})"
+    # List all books in the library
+    my_library.list_books()
+
+if __name__ == "__main__":
+    main()
 
